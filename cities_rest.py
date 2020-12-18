@@ -44,7 +44,7 @@ def dist_query():
 def _process_dist_query():
     city_start = request.form.get("city_start")
     city_finish = request.form.get("city_finish")
-    try:
+    try:  # it is better to ask for forgiveness than permission
         city_start = int(city_start)
         city_finish = int(city_finish)
     except ValueError:
