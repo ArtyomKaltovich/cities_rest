@@ -84,7 +84,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="REST service for calculation shortest path between two cities.\n"
                                                  f"Usage: send POST request to {URL}, and specify the following "
                                                  f"arguments: city_start, city_finish and api key")
-    parser.add_argument("--debug-mode", default=False,
+    parser.add_argument("--debug-mode", action="store_true",
                         help="Run server in debug mode, specify 1 or True to for it.")
 
     args = parser.parse_args()
